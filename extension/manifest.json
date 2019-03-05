@@ -1,0 +1,34 @@
+{
+    "applications": {
+        "gecko": {
+            "id": "openiv@steffo.eu"
+        }
+    },
+    
+    "manifest_version": 2,
+    "name": "Instant View Opener",
+    "version": "2019.03.06.1",
+    "developer": {
+        "name": "Stefano Pigozzi",
+        "url": "https://github.com/Steffo99/instant-view-opener"
+    },
+
+    "description": "When Alt+W is pressed, open the active tab in the IV editor present in the first tab.",
+
+    "permissions": [
+        "tabs"
+    ],
+
+    "commands": {
+        "open-iv": {
+            "suggested_key": {
+                "default": "Alt+W"
+            },
+            "description": "Open the IV template"
+        }
+    },
+
+    "background": {
+        "scripts": ["openiv.js"]
+    }
+}
