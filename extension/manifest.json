@@ -7,28 +7,41 @@
     
     "manifest_version": 2,
     "name": "Instant View Opener",
-    "version": "2019.03.06.1",
+    "version": "2019.03.06.2",
     "developer": {
         "name": "Stefano Pigozzi",
         "url": "https://github.com/Steffo99/instant-view-opener"
     },
 
-    "description": "When Alt+W is pressed, open the active tab in the IV editor present in the first tab.",
+    "description": "When Alt+W is pressed, open the active tab in the IV editor present in the first tab and more!",
 
     "permissions": [
         "tabs"
     ],
 
     "commands": {
-        "open-iv": {
+        "open-current": {
             "suggested_key": {
                 "default": "Alt+W"
             },
-            "description": "Open the IV template"
+            "description": "Open the current tab in the IV editor"
+        },
+        "open-hovered": {
+            "suggested_key": {
+                "default": "Alt+Q"
+            },
+            "description": "Open the hovered link in the IV editor"
         }
     },
 
     "background": {
-        "scripts": ["openiv.js"]
-    }
+        "scripts": ["background.js"]
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["contentscript.js"]
+        }
+    ]
 }
