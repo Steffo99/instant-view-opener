@@ -7,7 +7,7 @@
     
     "manifest_version": 2,
     "name": "Instant View Opener",
-    "version": "2019.03.06.2",
+    "version": "2019.03.07.1",
     "developer": {
         "name": "Stefano Pigozzi",
         "url": "https://github.com/Steffo99/instant-view-opener"
@@ -43,5 +43,7 @@
             "matches": ["http://*/*", "https://*/*"],
             "js": ["contentscript.js"]
         }
-    ]
+    ],
+
+    "incognito": "not_allowed"
 }
