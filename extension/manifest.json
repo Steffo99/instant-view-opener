@@ -34,7 +34,7 @@
         },
         "remove-original": {
             "suggested_key": {
-                "default": "Ctrl+Alt+D"
+                "default": "Alt+R"
             },
             "description": "Hide the ORIGINAL panel in the instant view editor"
         }

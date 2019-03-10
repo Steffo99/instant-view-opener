@@ -13,7 +13,7 @@ async function onMessage(message, sender, sendResponse) {
         return {"response": url.href};
     }
     else if(message["command"] == "removeOriginalSection") {
-        if(!document.url.startsWith("https://instantview.telegram.org/")) return;
+        if(!document.location.href.startsWith("https://instantview.telegram.org/")) return;
         let original_section = document.querySelector("#original-section")
         if(original_section === null) return;
         original_section.remove()
