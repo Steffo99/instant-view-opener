@@ -7,7 +7,7 @@
     
     "manifest_version": 2,
     "name": "Instant View Tools",
-    "version": "2019.03.10.1",
+    "version": "2019.03.10.2",
     "developer": {
         "name": "Stefano Pigozzi",
         "url": "https://github.com/Steffo99/instant-view-opener"

@@ -14,3 +14,5 @@ https://instantview.telegram.org/contest/example.org/templateN/
 Then, while you're browsing on the website the template is for, you can press `Alt+W` to open the current page in the selected template and `Alt+Q` to open the link you're hovering instead.
 
 While editing a template, press `Alt+R` to hide the _Original_ section from the IV editor, leaving only the code and the preview. To restore it, refresh the page.
+
+While visiting the [Contest page](https://instantview.telegram.org/contest), all checking templates will have an additional link to the _Processed issues_ page.

@@ -26,4 +26,15 @@ async function onMessage(message, sender, sendResponse) {
     }
 }
 
+if(document.location.href === "https://instantview.telegram.org/contest") 
+{
+    let timer_nodes = document.querySelectorAll(".iv-deadline:not(.highlight)")
+    timer_nodes.forEach((value, key, parent) => {
+        let templates_node = value.parentElement.getElementsByTagName("a")[0]
+        let main_url = templates_node.href
+        let processed_issues_url = main_url + "processed_issues"
+        value.outerHTML = `<a href="${processed_issues_url}">${value.innerHTML}</a>`
+    })
+}
+
 browser.runtime.onMessage.addListener(onMessage);
