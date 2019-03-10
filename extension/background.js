@@ -1,9 +1,10 @@
 "use strict";
 
 async function onCommand(command) {
+    let all_tabs = await browser.tabs.query({})
+    let first_tab = all_tabs[0];
+    if(!first_tab.url.startsWith("https://instantview.telegram.org/contest")) return;
     if(command == "open-current") {
-        let all_tabs = await browser.tabs.query({})
-        let first_tab = all_tabs[0];
         let active_tabs = await browser.tabs.query({"currentWindow": true, "active": true});
         let selected_tab = active_tabs[0];
         let url = new URL(first_tab.url);
@@ -15,8 +16,6 @@ async function onCommand(command) {
         })
     }
     else if(command == "open-hovered") {
-        let all_tabs = await browser.tabs.query({})
-        let first_tab = all_tabs[0];
         let active_tabs = await browser.tabs.query({"currentWindow": true, "active": true});
         let selected_tab = active_tabs[0];
         let link_response = await browser.tabs.sendMessage(selected_tab.id, {"command": "getHoveredLink"})
