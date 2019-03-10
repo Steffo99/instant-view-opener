@@ -6,7 +6,7 @@
     },
     
     "manifest_version": 2,
-    "name": "Instant View Opener",
+    "name": "Instant View Tools",
     "version": "2019.03.08.1",
     "developer": {
         "name": "Stefano Pigozzi",
@@ -31,6 +31,12 @@
                 "default": "Alt+Q"
             },
             "description": "Open the hovered link in the IV editor"
+        },
+        "remove-original": {
+            "suggested_key": {
+                "default": "Ctrl+Alt+D"
+            },
+            "description": "Hide the ORIGINAL panel in the instant view editor"
         }
     },
 
