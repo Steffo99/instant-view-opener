@@ -13,7 +13,8 @@ async function onCommand(command) {
         let created_tab = await browser.tabs.create({
             active: false,
             url: new_url,
-            index: 1
+            index: 1,
+            autoDiscardable: true
         })
     }
     else if(command == "open-hovered") {
@@ -29,7 +30,8 @@ async function onCommand(command) {
         let created_tab = await browser.tabs.create({
             active: false,
             url: new_url,
-            index: 1
+            index: 1,
+            autoDiscardable: true
         })
     }
 }
